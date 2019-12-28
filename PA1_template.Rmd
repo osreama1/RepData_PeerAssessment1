@@ -83,7 +83,7 @@ data_input_2[is.na(data_input_2$steps),]$steps<-data_input_2[is.na(data_input_2$
 
 ```{r}
 steps_day_2<-tapply(data_input_2$steps,data_input$date,sum,na.rm=TRUE)
-hist(steps_day_2,col="green")
+hist(steps_day_2,col="green",breaks = 8, xlab = "steps count", main = "Steps taken per day")
 ```
 
 ### Calculate and report the mean and median total number of steps taken per day. 
